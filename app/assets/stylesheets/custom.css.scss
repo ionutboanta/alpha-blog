@@ -1,2 +1,48 @@
+$navbar-default-bg:#050506;
+$navbar-default-link-color:#e6e6f2;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.6em;
+  color: #fff;
+  letter-spacing: -1px;
+  text-transformation: uppercase;
+  font-weight: bold;
+  
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('gradient.jpg');
+  background-size: cover;
+  height: 350px;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -1px;
+}
+
+.btn-xlarge {
+  font-size: 1.5em;
+  background-color: black;
+}
+
+footer {
+  margin-top: 45px;
+  paddng-top: 5px;
+  border-top: 1px solid black;
+  color: #777;
+}
