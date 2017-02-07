@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
       flash[:succsess]="Article was successfully created"
       redirect_to article_path(@article)
     else
-      render :new
+      render 'new'
     end
   end
   
