@@ -21,7 +21,9 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><%= link_to "New article", new_article_path %></li>
-              <li><a href="#">Another action</a></li>
+              <% if current_user.admin? %>
+              <li><%= link_to "Admin page", user_path(current_user) %></a></li>
+              <% end %>
               <li><a href="#">Something else here</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#">Separated link</a></li>
