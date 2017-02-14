@@ -9,8 +9,16 @@
           <%= link_to "#{category.name}", category_path(category) %>
         </li>
         <li><small><%= pluralize(category.articles.count, "article") %></small></li>
+         <% if logged_in? && (current_user.admin?) %>
+  <%= link_to "Edit this category", edit_category_path(category), 
+                                    class:"btn btn-primary btn-xs" %>
+  <%= link_to "Delete this category", category_path(category), method: :delete, 
+                                    data:{confirm: "Are you sure?"}, class:"btn btn-danger btn-xs" %>
+<% end %>
       </div>
+      
     </div>
+   
   </ul>
 
 <% end %>
